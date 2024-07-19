@@ -1,39 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tebak-Tebakan</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="quiz-page" class="page">
-        <h1>Tebak-Tebakan</h1>
-        <div class="quiz-container">
-            <p><strong>Pertanyaan:</strong> Siapa nama presiden sekarang?</p>
-            <input type="text" id="answer" placeholder="Masukkan jawaban di sini">
-            <button id="submit">Kirim</button>
-            <p id="feedback" class="hidden feedback"></p>
-            <button id="go-to-response-page" class="hidden button">Pergi ke Halaman Kedua</button>
+    <div id="quiz-container">
+        <h1>Soal-Soal Mudah</h1>
+        <div id="question-container">
+            <p>1. 2 + 2 = ?</p>
+            <input type="text" id="answer1">
         </div>
+        <button onclick="checkAnswers()">Submit</button>
     </div>
-
-    <div id="message" class="hidden message">
-        <div class="text">I Love You!</div>
-        <div class="flowers">
-            🌸🌹🌺🌻🌼🌷
-        </div>
+    <div id="result-container">
+        <h1>I love you</h1>
+        <div id="flowers"></div>
     </div>
-
-    <div id="response-page" class="page hidden">
-        <h1>Apakah kamu senang?</h1>
-        <button id="yes" class="button">Ya</button>
-        <button id="no" class="button">Tidak</button>
-        <div id="doll" class="doll doll-idle"></div>
-        <p id="response-text" class="hidden response-text"></p>
-        <button id="go-to-quiz-page" class="hidden button">Kembali ke Halaman Pertama</button>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
