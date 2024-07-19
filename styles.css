@@ -1,26 +1,47 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+/* Reset margin and padding */
+body, h1, p {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: #f0f0f0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007bff;
 }
 
 .quiz-container, #response-page {
-    margin: 20px auto;
-    max-width: 400px;
-    background-color: #fff;
+    background: #fff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
 }
 
 input[type="text"] {
     width: calc(100% - 22px);
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
 button {
@@ -28,70 +49,70 @@ button {
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     margin: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-#feedback {
-    margin-top: 10px;
-    font-weight: bold;
+button:active {
+    transform: scale(0.95);
 }
 
-#message {
-    text-align: center;
-    font-size: 30px;
-    margin-top: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-#message.show {
-    opacity: 1;
-    animation: fadeIn 2s ease-in-out;
-}
-
-#message .flowers {
-    font-size: 2em;
-    margin-top: 10px;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+.feedback {
+    color: #e74c3c;
 }
 
 .hidden {
     display: none;
 }
 
-#doll {
+.message {
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.message.show {
+    opacity: 1;
+}
+
+.flowers {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.doll {
     width: 100px;
     height: 100px;
-    margin: 20px auto;
-    background-image: url('https://via.placeholder.com/100'); /* Ganti dengan URL gambar boneka */
     background-size: cover;
-    position: relative;
     background-position: center;
+    position: relative;
+    margin: 20px auto;
 }
 
 .doll-idle {
+    background-image: url('https://media.giphy.com/media/5xaOcL5w1nRfq6zJtRk/giphy.gif'); /* Happy Doll */
     animation: idle 1s infinite;
 }
 
 .doll-happy {
+    background-image: url('https://media.giphy.com/media/5xaOcL5w1nRfq6zJtRk/giphy.gif'); /* Happy Doll */
     animation: happy 1s;
 }
 
 .doll-sad {
+    background-image: url('https://media.giphy.com/media/3o6Zt7dT5s6nPObg0k/giphy.gif'); /* Sad Doll */
     animation: sad 1s;
 }
 
@@ -118,11 +139,6 @@ button:hover {
     100% { top: 110px; opacity: 0; }
 }
 
-#response-text {
-    font-size: 20px;
-    margin-top: 20px;
-}
-
 .tear {
     width: 10px;
     height: 15px;
@@ -134,4 +150,10 @@ button:hover {
     transform: translateX(-50%);
     opacity: 1;
     animation: tear 1s forwards;
+}
+
+.response-text {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
 }
