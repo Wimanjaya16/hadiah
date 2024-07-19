@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.quiz-container, #response-page {
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#message {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#message.show {
+    opacity: 1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#message .flowers {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.hidden {
+    display: none;
+}
+
+#doll {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-image: url('https://via.placeholder.com/100'); /* Ganti dengan URL gambar boneka */
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+.doll-idle {
+    animation: idle 1s infinite;
+}
+
+.doll-happy {
+    animation: happy 1s;
+}
+
+.doll-sad {
+    animation: sad 1s;
+}
+
+@keyframes idle {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes happy {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes sad {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes tear {
+    0% { top: 100px; }
+    100% { top: 110px; opacity: 0; }
+}
+
+#response-text {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.tear {
+    width: 10px;
+    height: 15px;
+    background-color: #00f;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    animation: tear 1s forwards;
+}

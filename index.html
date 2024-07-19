@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak-Tebakan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="quiz-page">
+        <h1 style="text-align: center;">Tebak-Tebakan</h1>
+        <div class="quiz-container">
+            <p><strong>Pertanyaan:</strong> Siapa nama presiden sekarang?</p>
+            <input type="text" id="answer" placeholder="Masukkan jawaban di sini">
+            <button id="submit">Kirim</button>
+            <p id="feedback" class="hidden"></p>
+            <button id="go-to-response-page" class="hidden">Pergi ke Halaman Kedua</button>
+        </div>
+    </div>
+    <div id="message" class="hidden">
+        <div class="text">I Love You!</div>
+        <div class="flowers">
+            🌸🌹🌺🌻🌼🌷
+        </div>
+    </div>
+    <div id="response-page" class="hidden">
+        <h1 style="text-align: center;">Apakah kamu senang?</h1>
+        <button id="yes">Ya</button>
+        <button id="no">Tidak</button>
+        <div id="doll" class="doll-idle"></div>
+        <p id="response-text" class="hidden"></p>
+        <button id="go-to-quiz-page" class="hidden">Kembali ke Halaman Pertama</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
