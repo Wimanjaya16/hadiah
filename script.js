@@ -1,7 +1,7 @@
 function checkAnswers() {
     let answer1 = document.getElementById('answer1').value;
     
-    if (answer1 == '4') {
+    if (answer1 == 'Sandal jepit') {
         document.getElementById('quiz-container').style.display = 'none';
         document.getElementById('result-container').style.display = 'block';
         showFlowers();
